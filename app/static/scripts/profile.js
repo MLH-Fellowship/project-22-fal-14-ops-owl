@@ -1,7 +1,6 @@
 // Create the script tag, set the appropriate attributes
 const script = document.createElement("script");
-script.src =
-  "https://maps.googleapis.com/maps/api/js?key=AIzaSyCceeeYRxCfgV0-vLqu-KkxqbUDnsux0eY&callback=initMap";
+script.src = document.getElementById("googleMapsApi").dataset.key
 script.async = true;
 
 let map;

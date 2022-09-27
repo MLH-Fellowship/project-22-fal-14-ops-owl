@@ -93,6 +93,7 @@
         <h6 class="card-subtitle mb-2 mt-2 text-muted">{{ portfolio_data.countries|join(' | ', attribute='name') }}
         </h6>
         <div id="countryData" data-countries='{{ portfolio_data.countries|tojson }}'></div>
+        <div id="googleMapsApi" data-key='{{ api_key }}'></div>
         <div id="map"></div>
       </div>
     </div>

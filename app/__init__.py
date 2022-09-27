@@ -26,7 +26,7 @@ def portfolio(name):
         names = map(lambda x: x["name"].lower(), data)
         return render_template('index.html', title="The Ops Owls", url=os.getenv("URL"), names=names)
 
-    return render_template("profile.html", portfolio_data=portfolio_data)
+    return render_template("profile.html", portfolio_data=portfolio_data, api_key=os.getenv("GOOGLE_MAPS_API_KEY"))
 
 
 def getData():
