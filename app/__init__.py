@@ -72,6 +72,11 @@ def portfolio(name):
 
     return render_template("profile.html", portfolio_data=portfolio_data, api_key=os.getenv("GOOGLE_MAPS_API_KEY"))
 
+@app.route('/timeline')
+def timeline():
+    posts = [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
+    return render_template('timeline.html', title="Timeline", posts=posts)
+
 @app.route('/')
 def index():
     data = getData()
