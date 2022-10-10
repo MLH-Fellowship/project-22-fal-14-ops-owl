@@ -81,7 +81,7 @@ def timeline():
 def index():
     data = getData()
     names = map(lambda x: x["name"].lower(), data)
-    return render_template('index.html', title="The Ops Owls", url=os.getenv("URL"), names=names)
+    return render_template('index.html', title="The Ops Owlsss", url=os.getenv("URL"), names=names)
 
 def getData():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
