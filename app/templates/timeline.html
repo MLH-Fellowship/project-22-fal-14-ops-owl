@@ -42,11 +42,20 @@
 
 <script>
 
-  // const postForm = document.querySelector("#post_form")
-  // postForm.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   fetch('/api/timeline_post', {method: "POST", body: JSON.stringify(form.)})
-  //   })
+  const form = document.querySelector("#post_form")
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const payload = new FormData(form);
+    payload.set("name", document.querySelector('#name').value)
+    payload.set("email", document.querySelector('#email').value)
+    payload.set("content", document.querySelector('#content').value)
+    fetch('/api/timeline_post', {
+    method: 'POST',
+    body: payload,
+    })
+    .then(res => window.location="/timeline")
+    // .then(data => console.log(data))
+})
 </script>
 
 
