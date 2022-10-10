@@ -28,6 +28,20 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
+@app.route('/api/timeline_post/<int:post_id>', methods=['DELETE'])
+def delete_time_line_post(post_id):
+    success = TimelinePost.delete_by_id(post_id)
+    if success == 1:
+        return {
+            'message': f"Deleted post with id {post_id}"
+        }
+    else:
+        return {
+            'message': f"Cannot find post with id {post_id}"
+        }
+
+    
+
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     name = request.form['name']
@@ -41,6 +55,7 @@ def get_time_line_post():
     return {
         'timeline_posts': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
     }
+
 
 @app.route('/profile/<string:name>')
 def portfolio(name):
