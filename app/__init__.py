@@ -9,12 +9,16 @@ from playhouse.shortcuts import model_to_dict
 load_dotenv()
 app = Flask(__name__)
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), 
-    user=os.getenv("MYSQL_USER"), 
-    password=os.getenv("MYSQL_PASSWORD"), 
-    host=os.getenv("MYSQL_HOST"), 
-    port=3306
-)
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        host=os.getenv("MYSQL_HOST"),
+        port=3306
+    )
 
 class TimelinePost(Model):
   name = CharField()
@@ -81,11 +85,11 @@ def timeline():
 def index():
     data = getData()
     names = map(lambda x: x["name"].lower(), data)
-    return render_template('index.html', title="The Ops Owlsss", url=os.getenv("URL"), names=names)
+    return render_template('index.html', title="The Ops Owls", url=os.getenv("URL"), names=names)
 
 def getData():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    data_file = open(os.path.join(SITE_ROOT, "data.json"))
-    data = json.load(data_file)
+    with open(os.path.join(SITE_ROOT, "data.json")) as data_file:
+        data = json.load(data_file)
 
     return data
