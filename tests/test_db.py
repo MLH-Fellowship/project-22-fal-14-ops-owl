@@ -39,3 +39,5 @@ class TestTimelinePost(unittest.TestCase):
 
         posts = [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
         assert len(posts) == 2
+        self.assertEqual(posts[0]["name"], 'Jane Doe', "Names are not equal")
+        self.assertEqual(posts[1]["name"], 'John Doe', "Names are not equal")
