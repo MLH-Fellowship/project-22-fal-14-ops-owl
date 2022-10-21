@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from dotenv import load_dotenv
 import json
 from peewee import *
