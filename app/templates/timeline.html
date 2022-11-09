@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="parallax" style="height: 100%; overflow:scroll;padding:50px 50px 50px 50px;letter-spacing: 1px;">
+    <div className="form-wrapper">
+        <br />
+        <form className="form" id="form" action="/api/timeline_post" method="POST">
+            <h3 id="form-title">Add a Timeline Post!</h3>
+            <label aria-label="your name"> Name:
+                <input type="text" name="name" placeholder="John Doe" />
+            </label>
+            <br />
+            <label aria-label="email address"> Email Address:
+                <input type="text" name="email" placeholder="123@hello.com" />
+            </label>
+            <br />
+            <label aria-label="Content of your post"> Post Contents:
+                <input type="text" name="content" placeholder="Your post here" />
+            </label>
+            <br />
+            </label>
+            <br />
+            <br />
+            <button aria-label="button to submit form" id="form-submit" type="submit">
+                SUBMIT
+            </button>
+        </form>
+        </div>
+
+    <div>
+        <h1 style="font-size:40px">All Timeline Posts</h1>
+        {% for post in timeline_posts %} 
+            <div class="post">
+                <p>ID: {{post["id"]}}</p>
+                <p>Name: {{post["name"]}}</p>
+                <p>Email: {{post["email"]}}</p>
+                <p>Content: {{post["content"]}}</p>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("form");        
+    form.addEventListener("submit", function(e) {
+        // Prevent default behavior:
+        e.preventDefault();
+        // Create payload as new FormData object:
+        const payload = new FormData(form);
+        // Post the payload using Fetch:
+        fetch('/api/timeline_post', {
+        method: 'POST',
+        body: payload,
+        })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .finally(() => location.reload())
+        .catch ((err) => console.log("I'm the error", err))
+    })
+</script>    
+
+
+<!-- 
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Content</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{post["id"]}}</td>
+                        <td>{{post["name"]}}</td>
+                        <td>{{post["email"]}}</td>
+                        <td>{{post["content"]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div> -->
+
+
+{% endblock %}

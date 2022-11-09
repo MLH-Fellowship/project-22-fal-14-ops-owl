@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block main %}
+
 <script type="module" src="/static/scripts/profile.js" async defer></script>
 
 <div class="container-fluid profile-hero">
@@ -8,7 +9,7 @@
       <img src="/static/img/{{portfolio_data.name.lower()}}.jpg" />
     </a>
   </div>
-  <h1 class="text-center text-white">{{ portfolio_data.name }}</h1>
+  <h1 class="name">{{ portfolio_data.name }} {{ portfolio_data.last_name }}</h1>
   <a  href="{{portfolio_data.linked_in}}" target="_blank"><img class="social-logo" alt="LinkedIn" src="/static/img/linkedin_logo.png"></a>
   <a  href="{{portfolio_data.github}}" target="_blank"><img class="social-logo" alt="Github" src="/static/img/github.png"></a>
 </div>
@@ -20,16 +21,18 @@
       <div class="card about-me m-2 mb-4">
         <div class="card-body">
           <h4 class="card-title d-flex align-items-center gap-2">
-            <div> About Me </div><img style="width: 25px;" src="/static/img/icons/info.png">
+            <div> About Me </div><img id= "logo" src="/static/img/icons/info-icon.png">
           </h4>
           <p class="card-text">{{ portfolio_data.aboutMe }}</p>
         </div>
       </div>
 
       <!-- experiences -->
-      <div class="card experiences m-2 mb-4">
+      <div id="card" class="card experiences m-2 mb-4">
         <div class="card-body">
-          <h4 class="card-title">Experiences</h4>
+          <h4 class="card-title">
+            <div> Experiences <img id= "logo" class="work-icon" src="/static/img/icons/work-icon.png"></div>
+          </h4>
           <div class="experience-items-wrapper">
             {% for experience in portfolio_data.experiences %}
             <div class="experience-item mb-2">
@@ -46,7 +49,7 @@
 
       <div class="card education m-2 mb-4">
         <div class="card-body">
-          <h4 class="card-title">Education <img style="width: 35px;" src="/static/img/icons/education-cap.svg"></h4>
+          <h4 class="card-title">Education <img id= "logo" class= "ed-icon" src="/static/img/icons/ed-icon.png"></h4>
 
           <div class="education-items-wrapper">
             {% for education in portfolio_data.educations %}
@@ -61,7 +64,7 @@
       </div>
       <div class="card hobbies m-2 mb-4">
         <div class="card-body">
-          <h4 class="card-title">Hobbies</h4>
+          <h4 class="card-title">Hobbies<img id= "logo" class= "hobby-icon" src="/static/img/icons/hobby-icon.png"></h4>
 
           <div class="hobby-items-wrapper">
             {% for hobby in portfolio_data.hobbies %}

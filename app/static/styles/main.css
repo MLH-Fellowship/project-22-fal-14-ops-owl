@@ -1,58 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Sofia&display=swap');
+
+body {
+    background-image: url("/static/img/cacti_background.jpeg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-bottom: 0px;
+    opacity: 1;
+}
+
+.background-image{
+    opacity: .85;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 
 .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    opacity: 1;
 }
 
-.mlh-logo {
-    width: 100%;
-    height: 60px;
-    margin: auto;
-    background-color: #1C539F;
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mlh-logo img {
-    width: 200px;
-}
 
 .landing-hero {
-    background-color: #1d539f;
     text-align: center;
     min-height: calc(100vh - 60px);
+    padding-top: 100px;
+    opacity: 1;
 } 
 
 .profile-pictures img {
     border-radius: 50% !important;
-    width: 20rem;
-    height: 20rem;
+    width: 350px;
+    height: 350px;
     padding: 20px;
+    border: #fff;
+    border-style: double;
 }
 
-.text-white{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 50px;
-}
-
-.team-name{
+.greeting{
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
-    font-family: 'Bungee', cursive;
-    font-size: 50px;
+    font-size: 100px;
 }
 
-.owl-logo{
-    width: 500px;
-    margin-bottom: -120px;
+.intro{
+    font-family: 'Sofia', cursive;
+    color:#fff;
+    font-size: 30px;
 }
 
-@media only screen and (max-width: 800px) {
-    .owl-logo{
-        width: min(100%, 500px);
-        margin-bottom: 10px;
+footer{
+    vertical-align:top;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 855px) {
+    body {
+        background-image: url("/static/img/cacti_background_mobile.jpeg");
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-color: #FEDA05;
+        min-height: 150vh;
+        margin-bottom: 0px;
     }
 }

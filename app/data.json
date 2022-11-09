@@ -1,116 +1,16 @@
 [
   {
-    "name": "Bosco",
-    "linked_in": "https://www.linkedin.com/in/boscochw/",
-    "github": "https://github.com/BoscoCHW/",
-    "aboutMe": "Hello! I am Bosco, an aspiring, self-motivated software engineer who has a strong interest in building scalable software that has positive impact on society and the environment. I like studying mathematics and data structures because they allow us to conceptualize problems in ways that make solving them funner and easier.",
-    "experiences": [
-      {
-        "title": "Software Engineering Fellow (Jupyterlab)",
-        "duration": "May 2022 - Aug 2022",
-        "company": "MLH Fellowship",
-        "descriptions": "Implemented new features in the Git extension on Jupyterlab, such as multiple file selection, multiple remote repo support and commit graph visualization"
-      },
-      {
-        "title": "Full Stack Developer",
-        "duration": "Dec 2021 - Jun 2022",
-        "company": "Be Ultimate",
-        "descriptions": "Built a backend framework to automate work processes using Google App Script which integrates Shopify and Hubspot services through REST API and GraphQL"
-      },
-      {
-        "title": "DevOps Intern",
-        "duration": "Jun 2021 - Jan 2022",
-        "company": "Storius",
-        "descriptions": "Extended backend API functionalities, Developed story pop-ups on React front-end, Deployed backend updates in AWS EC2"
-      }
-    ],
-    "hobbies": [
-      {
-        "name": "piano",
-        "description": "I love playing piano! My favourite composers are Mozart, Back, Tchaikovsky and Beethoven. I also play anime songs.",
-        "img": "/static/img/bosco/piano.jpg"
-      }
-    ],
-    "educations": [
-      {
-        "school": "British Columbia Institute of Technology",
-        "qualification": "Diploma in Computer Systems Technology",
-        "duration": "2021-2023"
-      },
-      {
-        "school": "The Chinese University of Hong Kong",
-        "qualification": "BSSc Psychology",
-        "duration": "2014-2019"
-      }
-    ],
-    "countries": [
-      {
-        "name": "Hong Kong",
-        "lat": 22.396428,
-        "long": 114.109497
-      },
-      {
-        "name": "Canada",
-        "lat": 56.130367,
-        "long": -106.346771
-      },
-      {
-        "name": "United States",
-        "lat": 37.09024,
-        "long": -95.712891
-      },
-      {
-        "name": "Australia",
-        "lat": -25.274398,
-        "long": 133.775136
-      },
-      {
-        "name": "Taiwan",
-        "lat": 23.69781,
-        "long": 120.960515
-      },
-      {
-        "name": "Singapore",
-        "lat": 1.352083,
-        "long": 103.819836
-      },
-      {
-        "name": "Malaysia",
-        "lat": 4.210484,
-        "long": 101.975766
-      },
-      {
-        "name": "Vietnam",
-        "lat": 14.058324,
-        "long": 108.277199
-      },
-      { "name": "Cambodia", "lat": 12.565679, "long": 104.990963 },
-      { "name": "Thailand", "lat": 15.870032, "long": 100.992541 },
-      { "name": "China", "lat": 35.86166, "long": 104.195397 },
-      { "name": "Japan", "lat": 36.204824, "long": 138.252924 },
-      { "name": "South Korea", "lat": 35.907757, "long": 127.766922 },
-      { "name": "The Philippines", "lat": 12.879721, "long": 121.774017 },
-      { "name": "Austria", "lat": 47.516231, "long": 14.550072 },
-      { "name": "Germany", "lat": 51.165691, "long": 10.451526 },
-      { "name": "Luxembourg", "lat": 49.815273, "long": 6.129583 },
-      { "name": "Czech Republic", "lat": 49.817492, "long": 15.472962 },
-      { "name": "Italy", "lat": 41.87194, "long": 12.56738 },
-      { "name": "Hungary", "lat": 47.162494, "long": 19.503304 },
-      { "name": "Greece", "lat": 39.074208, "long": 21.824312 },
-      { "name": "Slovenia", "lat": 46.151241, "long": 14.995463 }
-    ]
-  },
-  {
     "name": "Sarah",
+    "last_name": "Graywood",
     "linked_in": "https://www.linkedin.com/in/smgraywood/",
     "github": "https://github.com/smgraywood/",
-    "aboutMe": "Hello! I'm Sarah! I'm a former veteran teacher, a career changer, and a Latina in tech. I have a passion for front end development, UI/UX design, and accessibility.",
+    "aboutMe": "Full stack Engineer with a passion for front end development, UI/UX design, and accessibility| Equity & Inclusion Expert | Latina in tech ",
     "experiences": [
       {
         "title": "Site Reliability Engineering Fellow",
         "duration": "Sep 2022 - Dec 2022",
         "company": "MLH Fellowship",
-        "descriptions": "Learned about SRE technologies including Python and Flask."
+        "descriptions": "I Learned Site Reliability Engineering skills including Linux Fundamentals, Scripting, Databasing, Testing, Containers, CICD, Monitoring and Networking, and Troubleshooting. I Built Portfolio Project and launched it via Digital Ocean and DuckDNS."
       },
       {
         "title": "Software Engineering Intern",
@@ -128,8 +28,13 @@
     "hobbies": [
       {
         "name": "gardening",
-        "description": "I care for over 100 cacti and succulents!",
+        "description": "I have over 100 cacti and succulents.",
         "img": "/static/img/sarah/gardening.jpg"
+      },
+      {
+        "name": "art",
+        "description": "I love drawing and painting.",
+        "img": "/static/img/sarah/art.jpg"
       }
     ],
     "educations": [

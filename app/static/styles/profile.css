@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Sofia&display=swap');
 
 .profile-hero {
-  background-color: #1d539f;
+  background-color: #F3ECD4;
+  opacity: .95;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -21,11 +21,49 @@
 #map {
   height: 25rem;
 }
-
-.card-title{
-  font-family: 'Bungee', cursive;
+.name{
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
 }
 
+.profile-wrapper{
+  opacity: .95;
+}
+
+.card-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  color: #FFF;
+  background-color: #c6c1ad;
+  opacity: .95;
+  text-transform:uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.card-body{
+  background-color: #c6c1ad;
+  color: #FFF;
+}
+
+#logo{
+  height: 25px;
+}
+
+.ed-icon{
+  margin-bottom: 10px;
+}
+
+.work-icon{
+  margin-bottom: 10px;
+}
+
+.hobby-icon{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 
 .hobby-img{
   margin-right: 5px;

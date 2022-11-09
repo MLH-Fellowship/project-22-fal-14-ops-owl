@@ -2,20 +2,22 @@
 {% block main %}
 
 <div class="container-fluid landing-hero">
-    <h1 class="team-name">{{ title }}</h1>    
-    <img class="owl-logo" alt="Owl" src="/static/img/owl.png">
     <div id="profile-pictures" class="container profile-pictures">
         <div class="row">
             {% for name in names %}
-            <div class="col">
+                <h4 class="greeting">Hi</h4>
+                <h4 class="intro">I'm {{name|capitalize}}!</h4>
+                <div class="col">
                 <a href="/profile/{{name}}">
                     <img src="/static/img/{{name}}.jpg" />
                 </a>
-                <h4 class="text-white">{{name|capitalize}}</h4>
             </div>
             {% endfor %}
         </div>
     </div>
+</div>
+<div>
+    <button onclick="document.location='/timeline'">Timeline Form</button>
 </div>
 
 {% endblock %}
